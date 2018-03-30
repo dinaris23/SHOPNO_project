@@ -1,0 +1,36 @@
+.services {
+	&_grid {
+		display: grid;
+		grid-template-columns: repeat(12, auto);
+		grid-gap: 10px;
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&_item {
+		position: relative;
+		&_content {
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			@include transition(all 1s);
+
+		 }
+		 &:hover .services_item_content {
+			opacity: 0.5;
+		}
+		
+		&__sm {
+			grid-column: span 5;
+			
+		}
+
+		&__bg {
+			grid-column:  span 7;
+			
+		}
+	}
+}

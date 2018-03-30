@@ -1,0 +1,144 @@
+html {
+	font-size: 10px;
+	font-family: $font-text;
+}
+body {
+	@include fontSize(16);
+	color: lighten($color-text, 50%);
+}
+.container {
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+//====burger icon====//
+.burger {
+    height: 20px;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+	&_l {
+    	position: absolute;
+    	display: block;
+    	height: 3px;
+    	width: 100%;
+    	background: #606061;
+    	transition: all .4s;
+	
+		&__top {
+    		top: 0;
+		}
+		&__middle {
+    		top: 8px;
+		}
+		&__bottom {
+    		bottom: 0;
+		}
+	}
+}	
+.burger_l__top.active {
+    transform: rotate(45deg);
+    top: 5px;
+}
+.burger_l__middle.active {
+    background: transparent;
+    transform: rotate(90deg);
+}
+.burger_l__bottom.active {
+    transform: rotate(-45deg);
+    top: 5px;
+}
+
+
+//====text-decoration====//
+.bg-blue {
+	background: lighten($color-theme, 10%);
+	display: inline-block;
+	padding: 0 10px;
+}
+.btn {
+	font-family: $font-title;
+	text-transform: uppercase;
+	@include fontSize(18);
+	color: lighten($color-text, 30%);
+	cursor: pointer;
+	&__tr {
+		border: 2px solid lighten($color-text, 30%);
+		background: transparent;
+		padding: 15px 30px;
+		@include transition(all .2s);
+		&:hover {
+			color: $color-theme;
+			border-color: $color-theme;
+			transform: scale(1.1);
+		}
+	}
+}
+.sc-header {
+	text-align: center;
+	padding: 130px 0;
+}
+.sc-title {
+	@include fontSize(38);
+	text-transform: uppercase;
+	color: $color-text;
+	font-family: $font-title;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.sc-subtitle {
+	@include fontSize(18);
+	text-transform: uppercase;
+	font-family: $font-subtitle;
+	color: lighten($color-text, 30%);
+	margin: 0;
+	&__b {
+		font-weight: bold;
+		color: lighten($color-text, 10%);
+	}
+	&__white {
+			color: #ffffff;
+		}
+}
+p {
+	line-height: 1.75;
+}
+.slick-slider::before {
+	content: "";
+    position: absolute;
+    display: block;
+    width: 85%;
+    height: 75%;
+    background: $color-section;
+    top: 6%;
+    left: 8%;
+
+}
+.slick-slider img {
+	position: relative;
+    left: 15%;
+}
+.dot {
+	width: 10px;
+    height: 10px;
+    display: block;
+    background: lighten($color-text, 70%);
+    border-radius: 4px;
+}
+.slick-dots {
+	text-align: center;
+}
+.slick-dots li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 5px;
+}
+.slick-active .dot {
+	background: $color-theme;
+}
+section:nth-child(even) {
+	background: lighten($color-section, 4%);
+}
