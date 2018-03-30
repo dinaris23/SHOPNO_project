@@ -142,3 +142,40 @@ p {
 section:nth-child(even) {
 	background: lighten($color-section, 4%);
 }
+
+.cross {
+	position: relative;
+	top: 30px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+		&:before {
+		position: absolute;
+		left: 15px;
+		content: ' ';
+		height: 33px;
+		width: 2px;
+		background-color: #000;
+		transform: rotate(45deg);
+		}
+		&:after {
+		transform: rotate(-45deg);
+		position: absolute;
+		left: 15px;
+		content: ' ';
+		height: 33px;
+		width: 2px;
+		background-color: #000;
+	}
+}
+
+.modal-link {
+	text-transform: uppercase;
+	font-family: $font-text;
+	cursor: pointer;
+	&:after {
+		content: '\2192';
+		font-size: 32px;
+		margin-left: 15px;
+	}
+}
