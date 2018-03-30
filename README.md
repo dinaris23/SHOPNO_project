@@ -1,2 +1,1 @@
-# SHOPNO_project
-One page site/adaptive responsive layout
+[LINK TO PROJECT](https://dinaris23.github.io/SHOPNO_project/app/index.html)
