@@ -10,7 +10,7 @@ jQuery(document).ready(function(){
         });
     });
     $('.modal-link').click(function(){
-        $('.services_modal').addClass('modal-active');
+        $(this).parent().parent().prev().addClass('modal-active');
         $('.cross').click(function(){
             $('.services_modal').removeClass('modal-active');
         });
