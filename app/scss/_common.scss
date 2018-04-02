@@ -190,6 +190,7 @@ section:nth-child(even) {
 	&__bg {
 		color: lighten($color-text, 70%); 
 		background: lighten($color-text, 30%); 
+		margin-left: 10px;
 		&:hover {
 			color: $color-text;
 			background: $color-theme;

@@ -1,4 +1,13 @@
 jQuery(document).ready(function(){   
+    $('.slick-slider').slick({
+        dots: true,
+        customPaging: function(slider, i) {
+            return '<span class="dot"></span>';
+            },
+        autoplay: true,
+        arrows: false
+    });
+    $('.slick-dots li button').remove();
     $('.burger').click(function(){
         $('.burger_l__top').toggleClass('active');
         $('.burger_l__middle').toggleClass('active');

@@ -1,1 +1,19 @@
+.footer {
+	background: $color-footer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 90px 0;
+	&_social {
+		color: $color-link;
+		padding-bottom: 20px;
+		text-transform: uppercase;
 
+	}
+	&_container {
+		text-align: center;
+	}
+	&_copyright {
+		padding-top: 40px;
+	}
+}
