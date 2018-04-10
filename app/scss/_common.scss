@@ -277,7 +277,27 @@ section:nth-child(even) {
 	background: url('../img/star.png') no-repeat;
 	margin-right: 10px;
 }
+.top-nav {
+	position: absolute;
+    padding: 1em;
+    height: 2em;
+    width: 2em;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-theme;
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    right: 2em;
+    &::before {
+    	content: '\2303';
+    	font-size: 50px;
 
+    }
+
+}
 //==== pop up style ====
 #bg_popup{
 position: fixed;
