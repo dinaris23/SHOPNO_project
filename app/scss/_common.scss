@@ -5,6 +5,7 @@ html {
 body {
 	@include fontSize(16);
 	color: lighten($color-text, 50%);
+	position: relative;
 }
 .container {
 	max-width: 1140px;
@@ -106,20 +107,48 @@ body {
 p {
 	line-height: 1.75;
 }
-.slick-slider::before {
+.top-slider::before {
 	content: "";
     position: absolute;
     display: block;
     width: 85%;
-    height: 75%;
+    height: 82%;
     background: $color-section;
     top: 6%;
     left: 8%;
 
 }
-.slick-slider img {
+.left-slider::before {
+	content: "";
+    position: absolute;
+    display: block;
+    width: 116%;
+    height: 75%;
+    background: #eff0f2;
+    top: 9%;
+    left: -8%;
+
+}
+.top-slider img {
 	position: relative;
     left: 15%;
+}
+.right-slider {
+	margin-left: 80px;
+	background: $color-section;
+	height: 72%;
+    top: 9%;
+	&_slide {
+		background: $color-section;
+		text-align: center;
+		& p {
+			padding: 20px 50px;
+		}
+		& h3 {
+			margin-top: 50px;
+		}
+
+	}
 }
 .dot {
 	width: 10px;
@@ -128,8 +157,48 @@ p {
     background: lighten($color-text, 70%);
     border-radius: 4px;
 }
+.prev , .next {
+	width: 55px;
+	height: 55px;
+	display: block;
+	background: #ffffff;
+	box-shadow: 2px 3px 10px lighten($color-text, 90%);
+	position: absolute;
+	cursor: pointer;
+}
+.next {
+	right: 0;
+	bottom: -75px;
+	&::before {
+		content: '\203a';
+		display: block;
+		position: relative;
+		color: #000000;
+		top: -23%;
+		left: 25%;
+    	color: #000;
+    	font-size: 60px;
+	}
+
+}
+.prev {
+	bottom: -75px;
+    right: 90px;
+    &::before {
+		content: "\2039";
+    	display: block;
+    	position: relative;
+    	top: -23%;
+    	left: 25%;
+    	color: #000;
+    	font-size: 60px;
+	}
+}
+
 .slick-dots {
 	text-align: center;
+	padding: 0;
+
 }
 .slick-dots li {
 	list-style: none;
@@ -198,3 +267,50 @@ section:nth-child(even) {
 
 	}
 }
+.rating {
+	display: flex;
+	justify-content: center;
+}
+.star {
+	width: 15px;
+	height: 15px;
+	background: url('../img/star.png') no-repeat;
+	margin-right: 10px;
+}
+
+//==== pop up style ====
+#bg_popup{
+position: fixed;
+z-index: 99999;
+background: rgba(0, 0, 0, 0.8);
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+opacity: 0;
+@include transition(all 1s);
+}
+   
+#popup {
+background:#021623;
+opacity: 0.7;
+width: 50vw;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+padding: 5px 20px;
+position: relative;
+@include transition(all 2s);
+
+}
+   
+.close{
+display:block;
+position:absolute;
+top:5px;
+right:5px;
+width:20px;
+height:20px;
+color:#555;
+background:#1BA600;
+cursor:pointer;}

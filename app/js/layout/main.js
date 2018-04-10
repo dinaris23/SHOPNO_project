@@ -1,12 +1,29 @@
 jQuery(document).ready(function(){   
-    $('.slick-slider').slick({
+    $('.top-slider').slick({
         dots: true,
         customPaging: function(slider, i) {
             return '<span class="dot"></span>';
             },
         autoplay: true,
         arrows: false
-    });
+    });    
+    $('.left-slider').slick({
+        dots: true,
+        customPaging: function(slider, i) {
+            return '<span class="dot"></span>';
+            },
+        autoplay: false,
+        asNavFor: '.right-slider',
+        arrows: false
+    });    
+    $('.right-slider').slick({
+        dots: false,
+        prevArrow: '<div class="prev"></div>',
+        nextArrow: '<div class="next"></div>',
+        autoplay: false,
+        asNavFor: '.left-slider',
+        arrows: true
+    });    
     $('.slick-dots li button').remove();
     $('.burger').click(function(){
         $('.burger_l__top').toggleClass('active');
@@ -25,3 +42,9 @@ jQuery(document).ready(function(){
         });
     });
 });
+
+//==== pop up ====
+
+var delay_popup = 2000;
+var elem = document.getElementById('bg_popup');
+    setTimeout("elem.style.opacity = '1'", delay_popup);
