@@ -12,7 +12,7 @@ jQuery(document).ready(function(){
         customPaging: function(slider, i) {
             return '<span class="dot"></span>';
             },
-        autoplay: false,
+        autoplay: true,
         asNavFor: '.right-slider',
         arrows: false
     });    
@@ -20,7 +20,7 @@ jQuery(document).ready(function(){
         dots: false,
         prevArrow: '<div class="prev"></div>',
         nextArrow: '<div class="next"></div>',
-        autoplay: false,
+        autoplay: true,
         asNavFor: '.left-slider',
         arrows: true
     });    
